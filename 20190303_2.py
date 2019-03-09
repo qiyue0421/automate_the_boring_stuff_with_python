@@ -1,4 +1,5 @@
-import zipfile, os
+import zipfile
+import os
 
 
 def backupToZip(folder):
@@ -7,7 +8,7 @@ def backupToZip(folder):
     # 确保folder是绝对路径
     folder = os.path.abspath(folder)
 
-    # 创建一个循环，检查备份ZIP文件的名称是否已经存在,存在则换个名字；不存在则跳出循环并使用该文件名
+    # 创建一个循环，检查备份ZIP文件的名称是否已经存在,存在则继续循环，不存在则跳出循环并使用该文件名
     while True:
         # 设置备份文件名，例如：backupfile_1.zip
         zipFilename = os.path.basename(folder) + '_' + str(num) + '.zip'

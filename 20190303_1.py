@@ -2,15 +2,18 @@ import re, os, shutil
 
 dateRegex = re.compile(r"""
     ^(.*?)                   # 前面可能出现一些字符，使用非贪心匹配
-    ((0|1)?\d)-              # 月份
-    ((0|1|2|3)?\d)-          # 日期
+    (([01])?\d)-              # 月份
+    (([0123])?\d)-          # 日期
     ((18|19|20)\d\d)         # 年份
     (.*?)$
 """, re.VERBOSE)
 
+# 遍历os.listdir()返回的文件名字符串列表
 for amerFilename in os.listdir('.'):
     # search()方法返回match对象
     mo = dateRegex.search(amerFilename)
+
+    # 不匹配正则表达式的，使用continue语句跳出循环
     if mo is None:
         continue
 
