@@ -15,3 +15,4 @@ while True:
         print('正确答案就是 ' + str(random_num) + ',你用了' + str(i) + '就猜对了.')
         break
     i = i+1
+    
