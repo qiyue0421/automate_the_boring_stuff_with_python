@@ -10,3 +10,4 @@ def change(list):
 
 spam = ['apple', 'banana', 'tofu', 'cats']
 print(change(spam))
+ 
