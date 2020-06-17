@@ -13,3 +13,5 @@ print('enter a num:')
 num = int(input())
 while True:
     collatz(num)
+
+    
