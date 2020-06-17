@@ -43,6 +43,7 @@ def add(Inventory, addItems):
     return Inventory
 
 
+
 inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 inv = add(inv, dragonLoot)
