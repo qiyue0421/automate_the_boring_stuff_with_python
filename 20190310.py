@@ -16,3 +16,4 @@ for rowNum in range(2, sheet.max_row + 1):
         # 使用字典的值更新数据
         sheet.cell(row=rowNum, column=2).value = price_update[producename]
 wb.save('produceSales_copy.xlsx')
+
